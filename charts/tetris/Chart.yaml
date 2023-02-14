@@ -1,5 +1,8 @@
 apiVersion: v2
 appVersion: 0.1.8
+annotations:
+  catalog.cattle.io/display-name: tetris
+  catalog.cattle.io/namespace: tetris
 description: An easy Tetris Clone running in your browser
 name: tetris
 type: application
