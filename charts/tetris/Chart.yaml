@@ -4,6 +4,7 @@ annotations:
   catalog.cattle.io/display-name: tetris
   catalog.cattle.io/namespace: tetris
   catalog.cattle.io/release-name: tetris
+  catalog.cattle.io/project: none
 description: An easy Tetris Clone running in your browser
 name: tetris
 type: application
