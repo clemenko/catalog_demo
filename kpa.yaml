@@ -1,8 +1,0 @@
-apiVersion: catalog.cattle.io/v1
-kind: ClusterRepo
-metadata:
-  name: kpa
-spec:
-  gitBranch: main
-  gitRepo: http://git.rfed.me/gitea/catalog_demo.git
-  url: ''

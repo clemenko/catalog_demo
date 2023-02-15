@@ -1,0 +1,22 @@
+kind: GitRepo
+apiVersion: fleet.cattle.io/v1alpha1
+metadata:
+  name: deploy
+  namespace: fleet-local
+spec:
+  branch: main
+  repo: http://git.rfed.me/gitea/catalog_demo
+  targetNamespace: flask
+  paths:
+  - deploy
+---
+kind: GitRepo
+apiVersion: fleet.cattle.io/v1alpha1
+metadata:
+  name: setup
+  namespace: fleet-local
+spec:
+  branch: main
+  repo: http://git.rfed.me/gitea/catalog_demo
+  paths:
+  - setup

@@ -1,37 +1,8 @@
-# Navlinks
-apiVersion: ui.cattle.io/v1
-kind: NavLink
-metadata:
-  name: tetris
-spec:
-  target: _blank
-  description: Cloud Native Tetris
-  label: Tetris
-  sideLabel: external
-  toURL: http://tetris.rfed.me
----
-# Navlinks
-apiVersion: ui.cattle.io/v1
-kind: NavLink
-metadata:
-  name: deploy
-spec:
-  target: _blank
-  description: Cloud Native Tetris - deploy button
-  label: deploy
-  sideLabel: external
-  toURL: http://deploy.rfed.me
----
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: deploy
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: deploy
-  namespace: deploy
   labels:
     app: deploy
 spec:
@@ -57,7 +28,6 @@ metadata:
   labels:
     app: deploy
   name: deploy
-  namespace: deploy
 spec:
   selector:
     app: deploy
@@ -71,7 +41,6 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: deploy
-  namespace: deploy
 spec:
   rules:
   - host: deploy.rfed.me

@@ -1,0 +1,34 @@
+# Navlinks
+apiVersion: ui.cattle.io/v1
+kind: NavLink
+metadata:
+  name: tetris
+spec:
+  target: _blank
+  description: Cloud Native Tetris
+  label: Tetris
+  sideLabel: external
+  toURL: http://tetris.rfed.me
+---
+# Navlinks
+apiVersion: ui.cattle.io/v1
+kind: NavLink
+metadata:
+  name: deploy
+spec:
+  target: _blank
+  description: Cloud Native Tetris - deploy button
+  label: deploy
+  sideLabel: external
+  toURL: http://deploy.rfed.me
+
+---
+# catalog
+apiVersion: catalog.cattle.io/v1
+kind: ClusterRepo
+metadata:
+  name: kpa
+spec:
+  gitBranch: main
+  gitRepo: http://git.rfed.me/gitea/catalog_demo.git
+  url: ''
