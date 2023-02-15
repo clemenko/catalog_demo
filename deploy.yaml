@@ -55,9 +55,9 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    name: deploy
-    namespace: deploy
+    app: deploy
   name: deploy
+  namespace: deploy
 spec:
   selector:
     app: deploy

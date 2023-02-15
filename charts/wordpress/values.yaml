@@ -6,12 +6,12 @@ wordpress:
     type: ClusterIP
 
   persistence:
-    enabled: false
-    size: 10Gi
+    enabled: true
+    size: 1Gi
 
   ingress:
     enabled: true
-    hostname: sslip.io
+    hostname: wordpress.rfed.me
     ingressClassName: nginx
   externalDatabase:
     host: localhost

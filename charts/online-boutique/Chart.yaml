@@ -4,7 +4,7 @@ description: A microservice online-boutique web shop to demo Istio
 type: application
 version: 0.3.8
 appVersion: "v0.3.6"
-icon: https://raw.githubusercontent.com/GoogleCloudPlatform/microservices-demo/master/src/frontend/static/icons/Hipster_HeroLogoCyan.svg
+icon: http://git.rfed.me/gitea/catalog_demo/raw/branch/main/charts/online-boutique/generic-catalog.svg
 maintainers:
   - name: Rancher
     url: https://github.com/rancher

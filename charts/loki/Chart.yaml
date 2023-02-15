@@ -5,7 +5,7 @@ version: 2.5.8
 appVersion: v2.5.0
 description: "Loki: like Prometheus, but for logs."
 home: https://grafana.com/loki
-icon: https://raw.githubusercontent.com/grafana/loki/master/docs/sources/logo.png
+icon: http://git.rfed.me/gitea/catalog_demo/raw/branch/main/charts/loki/logo.png
 sources:
   - https://github.com/grafana/loki
 maintainers:

@@ -1,12 +1,12 @@
 apiVersion: v2
 appVersion: 0.1.8
 annotations:
-  catalog.cattle.io/display-name: tetris
   catalog.cattle.io/namespace: tetris
+  catalog.cattle.io/display-name: tetris
   catalog.cattle.io/release-name: tetris
   catalog.cattle.io/project: none
 description: An easy Tetris Clone running in your browser
 name: tetris
 type: application
 version: 0.1.9
-icon: https://upload.wikimedia.org/wikipedia/commons/9/9c/Typical_Tetris_Game.svg
+icon: http://git.rfed.me/gitea/catalog_demo/raw/branch/main/charts/tetris/Typical_Tetris_Game.svg

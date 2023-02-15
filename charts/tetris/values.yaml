@@ -4,15 +4,15 @@
 
 autoplay: false
 title: "RGS presents"
-theme: "custom"
+theme: "modern"
 
 replicaCount: 1
 
 image:
-  repository: boomstack/tetris
+  repository: harbor.rfed.me/tetris/tetris
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: "0.2"
 
 imagePullSecrets: []
 nameOverride: ""

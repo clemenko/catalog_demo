@@ -9,7 +9,7 @@ questions:
   description: "User of the application"
   type: string
   required: true
-  label: WordPress Usernname
+  label: WordPress Username
   group: "WordPress Settings"
 - variable: wordpress.wordpressPassword
   description: "Password, will be auto-generated if not specified"
