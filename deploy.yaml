@@ -1,0 +1,86 @@
+# Navlinks
+apiVersion: ui.cattle.io/v1
+kind: NavLink
+metadata:
+  name: tetris
+spec:
+  target: _blank
+  description: Cloud Native Tetris
+  label: Tetris
+  sideLabel: external
+  toURL: http://tetris.rfed.me
+---
+# Navlinks
+apiVersion: ui.cattle.io/v1
+kind: NavLink
+metadata:
+  name: deploy
+spec:
+  target: _blank
+  description: Cloud Native Tetris - deploy button
+  label: deploy
+  sideLabel: external
+  toURL: http://deploy.rfed.me
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: deploy
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy
+  namespace: deploy
+  labels:
+    app: deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: deploy
+  template:
+    metadata:
+      labels:
+        app: deploy
+    spec:
+      containers:
+      - name: deploy
+        image: harbor.rfed.me/tetris/deploy
+        ports:
+        - containerPort: 5000
+        imagePullPolicy: IfNotPresent
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    name: deploy
+    namespace: deploy
+  name: deploy
+spec:
+  selector:
+    app: deploy
+  ports:
+  - name: deploy
+    protocol: TCP
+    port: 5000
+    targetPort: 5000
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: deploy
+  namespace: deploy
+spec:
+  rules:
+  - host: deploy.rfed.me
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: deploy
+            port:
+              number: 5000
