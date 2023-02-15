@@ -3,7 +3,7 @@
 # Declare variables to be passed into your templates.
 
 autoplay: false
-title: "SUSE presents"
+title: "RGS presents"
 theme: "custom"
 
 replicaCount: 1
