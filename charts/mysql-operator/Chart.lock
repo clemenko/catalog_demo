@@ -1,6 +1,0 @@
-dependencies:
-- name: mysql-operator
-  repository: https://helm-charts.bitpoke.io
-  version: 0.6.2
-digest: sha256:f58a6b2a8be057267d7e66c237f3a91bfb93f85f245de3536fc90cd86c45b441
-generated: "2022-04-19T13:45:33.70579+02:00"

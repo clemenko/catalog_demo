@@ -1,6 +1,0 @@
-nfs-server-provisioner:
-  storageClass:
-    defaultClass: true
-    mountOptions:
-    - vers=3
-    - nolock
